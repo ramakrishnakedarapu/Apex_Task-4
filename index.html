@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Feature Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-blue-600">PORTFOLIO</div>
+                <div class="hidden md:flex space-x-8">
+                    <button onclick="showSection('portfolio')" class="nav-link active">Portfolio</button>
+                    <button onclick="showSection('todo')" class="nav-link">Todo App</button>
+                    <button onclick="showSection('products')" class="nav-link">Products</button>
+                    <button onclick="showSection('contact')" class="nav-link">Contact</button>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <button onclick="showSection('portfolio')" class="block w-full text-left py-2 px-4 hover:bg-gray-100">Portfolio</button>
+                <button onclick="showSection('todo')" class="block w-full text-left py-2 px-4 hover:bg-gray-100">Todo App</button>
+                <button onclick="showSection('products')" class="block w-full text-left py-2 px-4 hover:bg-gray-100">Products</button>
+                <button onclick="showSection('contact')" class="block w-full text-left py-2 px-4 hover:bg-gray-100">Contact</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+
+        <!-- Portfolio Section -->
+        <section id="portfolio-section" class="section active">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">Rama Krishna Kedarapu</h1>
+                <p class="text-xl text-gray-600">Full Stack Developer & Designer</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 mb-12">
+                <div class="md:w-1/3">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <img src="img.png" alt="Profile" class="w-32 h-32 rounded-full mx-auto mb-4">
+                        <h2 class="text-2xl font-bold text-center mb-4">About Me</h2>
+                        <p class="text-gray-700 mb-4">
+                            Passionate developer in building web applications. 
+                            Specializing in JavaScript frameworks and UX design.
+                        </p>
+                        <div class="space-y-4">
+                            <div>
+                                <h3 class="font-semibold">Skills</h3>
+                                <div class="mt-2 space-y-2">
+                                    <div>
+                                        <div class="flex justify-between">
+                                            <span>HTML/CSS</span>
+                                            <span>95%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                            <div class="bg-blue-600 h-2.5 rounded-full skill-bar" style="width: 95%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between">
+                                            <span>JavaScript</span>
+                                            <span>90%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                            <div class="bg-blue-600 h-2.5 rounded-full skill-bar" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between">
+                                            <span>React</span>
+                                            <span>85%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                            <div class="bg-blue-600 h-2.5 rounded-full skill-bar" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between">
+                                            <span>Node.js</span>
+                                            <span>80%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                            <div class="bg-blue-600 h-2.5 rounded-full skill-bar" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-2/3">
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-6">My Projects</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="project-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Project 1" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="font-bold text-xl mb-2">E-Commerce Platform</h3>
+                                    <p class="text-gray-700 mb-4">A full-featured online store with payment integration and inventory management.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">React</span>
+                                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Node.js</span>
+                                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">MongoDB</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+                                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Project 2" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="font-bold text-xl mb-2">Analytics Dashboard</h3>
+                                    <p class="text-gray-700 mb-4">Interactive data visualization platform with real-time updates.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">React</span>
+                                        <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">D3.js</span>
+                                        <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Firebase</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h2 class="text-2xl font-bold mb-6">Experience</h2>
+                        <div class="space-y-6">
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h3 class="font-bold text-lg">Frontend Developer</h3>
+                                <p class="text-gray-600">Sparta Coding Club Korea. • 2024</p>
+                                <p class="text-gray-700 mt-2">Led a team of 5 developers to build responsive web applications using React.</p>
+                            </div>
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h3 class="font-bold text-lg">Web Developer</h3>
+                                <p class="text-gray-600">ApexPlanet Software pvt.ltd • 2025 - present</p>
+                                <p class="text-gray-700 mt-2">Developed and maintained websites with a focus on performance and accessibility.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Todo App Section -->
+        <section id="todo-section" class="section">
+            <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
+                <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">Todo List App</h1>
+                
+                <div class="flex mb-6">
+                    <input 
+                        type="text" 
+                        id="todo-input" 
+                        placeholder="Add a new task..." 
+                        class="flex-grow px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                    <button 
+                        onclick="addTodo()" 
+                        class="bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition"
+                    >
+                        Add
+                    </button>
+                </div>
+
+                <div class="flex justify-between mb-4">
+                    <div class="text-gray-600">
+                        <span id="total-todos">0</span> tasks total, 
+                        <span id="completed-todos">0</span> completed
+                    </div>
+                    <div>
+                        <button onclick="clearCompleted()" class="text-sm text-red-600 hover:text-red-800">
+                            Clear Completed
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex space-x-2 mb-4">
+                    <button onclick="filterTodos('all')" class="filter-btn active px-3 py-1 rounded">All</button>
+                    <button onclick="filterTodos('active')" class="filter-btn px-3 py-1 rounded">Active</button>
+                    <button onclick="filterTodos('completed')" class="filter-btn px-3 py-1 rounded">Completed</button>
+                </div>
+
+                <ul id="todo-list" class="space-y-2">
+                    <!-- Todos will be added here dynamically -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products-section" class="section">
+            <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">Product Listing</h1>
+            
+            <div class="flex flex-col md:flex-row gap-6">
+                <!-- Filters -->
+                <div class="md:w-1/4 bg-white rounded-lg shadow-md p-4 h-fit sticky top-20">
+                    <h2 class="text-xl font-bold mb-4">Filters</h2>
+                    
+                    <div class="mb-6">
+                        <h3 class="font-semibold mb-2">Categories</h3>
+                        <div class="space-y-2">
+                            <button onclick="filterProducts('all')" class="filter-btn active w-full text-left px-3 py-2 rounded">All Products</button>
+                            <button onclick="filterProducts('electronics')" class="filter-btn w-full text-left px-3 py-2 rounded">Electronics</button>
+                            <button onclick="filterProducts('clothing')" class="filter-btn w-full text-left px-3 py-2 rounded">Clothing</button>
+                            <button onclick="filterProducts('books')" class="filter-btn w-full text-left px-3 py-2 rounded">Books</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h3 class="font-semibold mb-2">Price Range</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>$0</span>
+                                    <span>$100</span>
+                                </div>
+                                <input type="range" min="0" max="100" value="100" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" id="price-range">
+                            </div>
+                            <button onclick="applyPriceFilter()" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Apply</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Products -->
+                <div class="md:w-3/4">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="text-gray-600">
+                            Showing <span id="product-count">0</span> products
+                        </div>
+                        <div>
+                            <select onchange="sortProducts(this.value)" class="px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="default">Default</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Rating</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="products-container">
+                        <!-- Products will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-section" class="section">
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
+                <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">Contact Me</h1>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h2 class="text-xl font-semibold mb-4">Get in Touch</h2>
+                        <p class="text-gray-600 mb-6">
+                            Have a project in mind or want to discuss potential opportunities? 
+                            Feel free to reach out using the form or contact details below. 
+                        </p>
+                                            <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Location</h3>
+                                <p class="text-gray-600">Hyderabad</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Email</h3>
+                                <p class="text-gray-600">rk@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Phone</h3>
+                                <p class="text-gray-600">(123) 456-7890</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fab fa-linkedin-in text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">LinkedIn</h3>
+                                <p class="text-gray-600">linkedin.com/in/ramakrishna</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form id="contact-form">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="button" onclick="submitContactForm()" class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <h2 class="text-xl font-bold">Rama Krishna Kedarapu</h2>
+                <p class="text-gray-400">Full Stack Developer</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rama-krishna-kedarapu-508910247/" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+            <p>&copy; 2025 Rama Krishna Kedarapu. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
